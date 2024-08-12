@@ -4,7 +4,7 @@ header {
   padding: 4px;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 7.5vh;
   background-color: rgb(60, 60, 60);
 }
 
@@ -31,7 +31,7 @@ nav {
 }
 
 .pages a:hover {
-  color: limegreen;
+  color: rgba(21, 175, 206, 1);
 }
 
 .links {
@@ -52,16 +52,60 @@ li a {
 }
 
 li a:hover {
-  color: limegreen;
+  color: rgba(21, 175, 206, 1);
 }
 
 .home {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin: auto;
   color: inherit;
-  height: fit-content;
+  height: 50%;
+  width: 100%;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  border: 1px solid black;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.title_container h1 {
+  font-size: 3.5em;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.profile_picture {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+  filter: brightness(0.7);
+  outline: 3px solid white;
 }
 
 footer {
