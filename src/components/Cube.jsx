@@ -20,7 +20,6 @@ export const Cube = () => {
         <div className="face back">
           <img className="logo" src="src/assets/rails.svg" alt="Rails logo" />
         </div>
-
       </div>
     </div>
   )

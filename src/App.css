@@ -78,6 +78,36 @@ li a:hover {
 
 .title_container h1 {
   font-size: 3.5em;
+  letter-spacing: 0.02em;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.letter:hover {
+  color: rgba(21, 175, 206, 1);
+  transform: scale(1.2);
+}
+
+.last {
+  margin-right: 10px;
+}
+
+.border {
+  margin: 0 auto;
+  width: 95%;
+  border: 1px solid white;
+}
+
+.subheading {
+  display: flex;
+  font-size: 1.5em;
+  margin-top: 10px;
+  gap: 10px;
+  color: silver;
+  filter: brightness(0.6);
 }
 
 @keyframes slideIn {
