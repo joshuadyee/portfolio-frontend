@@ -1,4 +1,4 @@
-import { ProfilePic } from "./ProfilePic"
+import { Cube } from "./Cube"
 
 export const Home = () => {
   return (
@@ -8,7 +8,7 @@ export const Home = () => {
         <h1>I'm Josh Yee,</h1>
         <h1>Full-Stack Developer.</h1>
       </div>
-      <ProfilePic />
+      <Cube />
     </section>
   )
 }  
