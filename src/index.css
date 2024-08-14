@@ -17,6 +17,7 @@ html {
   font-size: large;
   color: #cfdbe2bb;
   filter: brightness(1.2);
+  scroll-behavior: smooth;
 }
 
 main {
