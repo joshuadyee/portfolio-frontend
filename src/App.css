@@ -153,8 +153,8 @@ li a:hover {
 
 .cube {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   transform-style: preserve-3d;
   animation: turn 7s infinite linear;
 }
@@ -186,27 +186,27 @@ li a:hover {
 }
 
 .front {
-  transform: translateZ(12.5dvh);
+  transform: translateZ(10.75dvh);
 }
 
 .back {
-  transform: translateZ(-12.5dvh) rotateY(180deg);
+  transform: translateZ(-10.75dvh) rotateY(180deg);
 }
 
 .left {
-  transform: translateX(-12.5dvh) rotateY(-90deg);
+  transform: translateX(-10.75dvh) rotateY(-90deg);
 }
 
 .right {
-  transform: translateX(12.5dvh) rotateY(90deg);
+  transform: translateX(10.75dvh) rotateY(90deg);
 }
 
 .top {
-  transform: translateY(-12.5dvh) rotateX(90deg);
+  transform: translateY(-10.75dvh) rotateX(90deg);
 }
 
 .bottom {
-  transform: translateY(12.5dvh) rotateX(-90deg);
+  transform: translateY(10.75dvh) rotateX(-90deg);
 }
 
 @keyframes turn {
