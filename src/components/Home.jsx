@@ -3,7 +3,7 @@ import { HomeButtons } from "./HomeButtons"
 
 export const Home = () => {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div className="landing_screen">
         <div className="title_container">
           <h1>

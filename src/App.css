@@ -6,8 +6,10 @@ header {
   align-items: center;
   height: 7.5vh;
   background-color: rgb(60, 60, 60);
+  position: fixed;
 }
 
+/* Navbar Stylings */
 nav {
   display: flex;
   justify-content: center;
@@ -21,7 +23,6 @@ nav {
   justify-content: space-evenly;
   margin: auto 5px;
 }
-
 
 .pages a {
   text-decoration: none;
@@ -55,25 +56,30 @@ li a:hover {
   color: rgba(21, 175, 206, 1);
 }
 
+/* Home page */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .landing_screen {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: inherit;
-  height: 70vh;
-  width: 100%;
-  position: relative;
-  top: -3.5em;
-  gap: 5em;
+  gap: 2rem;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
 }
 
 .title_container {
   display: flex;
   flex-direction: column;
-  flex: 1;
   padding: 1em;
   justify-content: center;
-  align-items: center;
   animation: slideIn 2s ease-out forwards;
   white-space: nowrap;
 }
@@ -112,7 +118,7 @@ li a:hover {
 
 .border {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   border: 1px solid white;
 }
 
@@ -120,6 +126,7 @@ li a:hover {
   display: flex;
   font-size: 1.5em;
   margin-top: 10px;
+  align-items: center;
   gap: 10px;
   color: silver;
   filter: brightness(0.6);
@@ -141,38 +148,40 @@ li a:hover {
   outline: 3px solid white;
 }
 
+/* Cube Container */
 .cube-container {
-  width: 25dvh;
-  height: 25dvh;
-  perspective: 800px;
+  width: 25vmin;
+  height: 25vmin;
+  perspective: 1000px;
   margin: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Cube */
 .cube {
   position: relative;
-  width: 85%;
-  height: 85%;
+  width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
-  animation: turn 7s infinite linear;
+  animation: turn 7.5s infinite linear;
 }
 
 .cube:hover {
   animation-play-state: paused;
 }
 
+/* Cube Faces */
 .face {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(134, 130, 130, .2);
   border: 2px solid black;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgb(249, 244, 244);
+  box-shadow: 0 0 10px rgb(0, 242, 255);
   color: white;
   position: absolute;
-  opacity: .8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,31 +191,63 @@ li a:hover {
 .logo {
   width: 60%;
   height: 60%;
-  filter: saturate(1.4);
+  filter: contrast(1.3);
 }
 
 .front {
-  transform: translateZ(10.75dvh);
+  transform: translateZ(12.5dvh);
 }
 
 .back {
-  transform: translateZ(-10.75dvh) rotateY(180deg);
+  transform: translateZ(-12.5dvh) rotateY(180deg);
 }
 
 .left {
-  transform: translateX(-10.75dvh) rotateY(-90deg);
+  transform: translateX(-12.5dvh) rotateY(-90deg);
 }
 
 .right {
-  transform: translateX(10.75dvh) rotateY(90deg);
+  transform: translateX(12.5dvh) rotateY(90deg);
 }
 
 .top {
-  transform: translateY(-10.75dvh) rotateX(90deg);
+  transform: translateY(-12.5dvh) rotateX(90deg);
 }
 
 .bottom {
-  transform: translateY(10.75dvh) rotateX(-90deg);
+  transform: translateY(12.5dvh) rotateX(-90deg);
+}
+
+/* Cube Faces on smaller screens */
+@media (max-width: 768px) {
+  .cube-container {
+    width: 35vmin;
+    height: 35vmin;
+  }
+
+  .front {
+    transform: translateZ(17.5vmin);
+  }
+
+  .back {
+    transform: translateZ(-17.5vmin) rotateY(180deg);
+  }
+
+  .left {
+    transform: translateX(-17.5vmin) rotateY(-90deg);
+  }
+
+  .right {
+    transform: translateX(17.5vmin) rotateY(90deg);
+  }
+
+  .top {
+    transform: translateY(-17.5vmin) rotateX(90deg);
+  }
+
+  .bottom {
+    transform: translateY(17.5vmin) rotateX(-90deg);
+  }
 }
 
 @keyframes turn {
@@ -231,13 +272,13 @@ li a:hover {
   }
 }
 
+/* Home buttons */
+
 .home_buttons {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
-  margin: 0 auto;
-  overflow: hidden;
 }
 
 .button {
@@ -254,6 +295,20 @@ li a:hover {
   cursor: pointer;
   background-color: rgba(21, 175, 206, 0.866);
   color: rgba(9, 9, 121, 1);
+}
+
+/* About page */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #f0f0f0;
+  height: 100vh;
+  width: 100%;
+  padding: 2em;
+  margin: 0;
 }
 
 footer {

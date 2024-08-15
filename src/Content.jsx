@@ -5,6 +5,7 @@ export const Content = () => {
   return (
     <main className="container">
       <Home />
+      <About />
     </main>
   )
 }
