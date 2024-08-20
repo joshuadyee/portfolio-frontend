@@ -1,5 +1,6 @@
 import { Cube } from "./Cube"
 import { HomeButtons } from "./HomeButtons"
+import { Links } from "./Links"
 
 export const Home = () => {
   return (
@@ -51,6 +52,7 @@ export const Home = () => {
         <Cube />
       </div>
       {/* <HomeButtons  /> */}
+      <Links />
     </section>
   )
 }  
