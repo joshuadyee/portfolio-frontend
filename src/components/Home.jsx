@@ -6,25 +6,18 @@ export const Home = () => {
     <section className="home" id="home">
       <div className="landing_screen">
         <div className="title_container">
-          <h1>
-            <span className="letter">H</span>
-            <span className="letter">e</span>
-            <span className="letter">y</span>
-            <span className="letter">!</span>
-          </h1>
-          <h1>
-            <span className="letter">I</span>
-            <span className="letter">'</span>
-            <span className="letter last">m</span>
+          <h1 className="my_name">
             <span className="letter">J</span>
             <span className="letter">o</span>
             <span className="letter">s</span>
-            <span className="letter last">h</span>
+            <span className="letter">h</span>
+            <span className="letter">u</span>
+            <span className="letter last">a</span>
             <span className="letter">Y</span>
             <span className="letter">e</span>
             <span className="letter">e</span>
           </h1>
-          <h1>
+          <h1 className="job_title">
             <span className="letter">S</span>
             <span className="letter">o</span>
             <span className="letter">f</span>
@@ -51,10 +44,13 @@ export const Home = () => {
             <h3>•</h3>
             <h3>Ruby on Rails</h3>
           </div>
+          {/* <div className="subheading contact">
+            Los Angeles • (626) 808-2891
+          </div> */}
         </div>
         <Cube />
       </div>
-      <HomeButtons  />
+      {/* <HomeButtons  /> */}
     </section>
   )
 }  
