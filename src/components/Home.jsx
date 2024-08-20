@@ -1,5 +1,4 @@
 import { Cube } from "./Cube"
-import { HomeButtons } from "./HomeButtons"
 import { Links } from "./Links"
 
 export const Home = () => {
@@ -8,34 +7,10 @@ export const Home = () => {
       <div className="landing_screen">
         <div className="title_container">
           <h1 className="my_name">
-            <span className="letter">J</span>
-            <span className="letter">o</span>
-            <span className="letter">s</span>
-            <span className="letter">h</span>
-            <span className="letter">u</span>
-            <span className="letter last">a</span>
-            <span className="letter">Y</span>
-            <span className="letter">e</span>
-            <span className="letter">e</span>
+            Joshua Yee
           </h1>
           <h1 className="job_title">
-            <span className="letter">S</span>
-            <span className="letter">o</span>
-            <span className="letter">f</span>
-            <span className="letter">t</span>
-            <span className="letter">w</span>
-            <span className="letter">a</span>
-            <span className="letter">r</span>
-            <span className="letter last">e</span>
-            <span className="letter">D</span>
-            <span className="letter">e</span>
-            <span className="letter">v</span>
-            <span className="letter">e</span>
-            <span className="letter">l</span>
-            <span className="letter">o</span>
-            <span className="letter">p</span>
-            <span className="letter">e</span>
-            <span className="letter">r</span>
+            Software Developer
           </h1>
           <hr className="border"/>
           <div className="subheading">
@@ -51,7 +26,6 @@ export const Home = () => {
         </div>
         <Cube />
       </div>
-      {/* <HomeButtons  /> */}
       <Links />
     </section>
   )

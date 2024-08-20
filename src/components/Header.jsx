@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 export const Header = () => {
   const [activeSection, setActiveSection] = useState("home")
@@ -29,12 +28,27 @@ export const Header = () => {
 
   return (
     <header>
-      <nav >
-        <div className="pages">
-          <a className={activeSection === "home" ? "active" : ""} href="">Home</a>
-          <a className={activeSection === "about" ? "active" : ""} href="#about">About</a>
-          <a className={activeSection === "portfolio" ? "active" : ""} href="#portfolio">Portfolio</a>
-          <a className={activeSection === "contact" ? "active" : ""} href="#contact">Contact</a>
+      <div className="home-icon">
+        <a href="/">
+          JY
+        </a>
+      </div>
+      <nav>
+        <div className="section-links-container">
+          <ul className="section-links">
+            <li>
+              <a href="#home" className={activeSection === "home" ? "active" : ""} >Home</a>
+            </li>
+            <li>
+              <a href="#about" className={activeSection === "about" ? "active" : ""} >About</a>
+            </li>
+            <li>
+              <a href="#portfolio" className={activeSection === "portfolio" ? "active" : ""} >Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" className={activeSection === "contact" ? "active" : ""} >Contact</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>

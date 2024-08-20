@@ -5,8 +5,9 @@
 }
 
 :root {
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(0, 212, 255, 1) 100%);
-  /* background: radial-gradient(circle, rgba(21, 175, 206, 1), rgba(11, 11, 173, 1), rgba(2, 0, 36, 1)) */
+  /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(0, 212, 255, 1) 100%); */
+  background: radial-gradient(circle, rgba(21, 175, 206, 1), rgba(11, 11, 173, 1), rgba(2, 0, 36, 1));
+  background-attachment: fixed;
 }
 
 body,
@@ -14,9 +15,8 @@ html {
   font-family: "Zain", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: large;
-  color: #cfdbe2bb;
-  filter: brightness(1.2);
+  font-size: 1rem;
+  color: #e7edf0;
   scroll-behavior: smooth;
 }
 

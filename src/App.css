@@ -1,42 +1,64 @@
 header {
   width: 100%;
   display: flex;
-  padding: .25rem;
-  justify-content: center;
+  padding: 0.25rem;
+  justify-content: space-between;
   align-items: center;
   height: 7.5vh;
   border-bottom: 1px solid white;
   position: fixed;
+  z-index: 100;
+  background-color: rgba(2, 0, 173, 1);
+  filter: brightness(0.9);
 }
 
 /* Navbar Stylings */
-nav {
+
+.home-icon {
   display: flex;
+  flex: 0 0 25%;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  font-size: 2.5rem;
+  color: inherit;
 }
 
-.pages {
-  display: flex;
-  flex: 0 0 75%;
-  justify-content: space-evenly;
-  margin: auto 5px;
-}
-
-.pages a {
+.home-icon a {
   text-decoration: none;
   color: inherit;
-  font-size: x-large;
-  transition: color 0.3s;
 }
 
-.pages a:hover {
+.home-icon a:hover {
   color: rgba(21, 175, 206, 1);
 }
 
-.pages a.active {
-  color: white;
+nav {
+  display: flex;
+  flex: 0 0 50%;
+  width: 100%;
+}
+
+.section-links-container {
+  display: flex;
+  flex: 0 0 75%;
+  justify-content: flex-end;
+}
+
+.section-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+nav li a.active {
+  color: rgb(0, 210, 252);
   font-weight: bold;
 }
 
@@ -80,35 +102,25 @@ nav {
 }
 
 .title_container h1 {
-  font-size: 3.5em;
-  white-space: nowrap;
-  overflow: hidden;
+  /* white-space: nowrap; */
+  overflow: none;
 }
 
-.my_name span {
-  font-size: 2em;
-  margin-bottom: -2rem;
-  color: rgba(180, 180, 180, 0.886);
+.my_name {
+  font-size: 6em;
+  color: white;
+  margin: 0;
+  text-shadow:
+    0 0 0.25rem rgba(0, 51, 255, 0.902),
+    0 0 0.25rem rgba(0, 51, 255, 0.902),
+    0 0 0.25rem rgba(0, 51, 255, 0.902),
+    0 0 0.25rem rgba(0, 51, 255, 0.902);
 }
 
 .job_title {
-  font-size: 1.5em;
-  color: rgb(180, 180, 180);
-  filter: brightness(0.8);
-}
-
-.letter {
-  display: inline-block;
-  transition: transform 0.3s ease-in-out, color 0.3s ease;
-}
-
-.letter:hover {
-  color: rgba(21, 175, 206, 1);
-  transform: scale(1.2);
-}
-
-.last {
-  margin-right: .625rem;
+  font-size: 3.5rem;
+  margin-top: -1rem;
+  color: silver;
 }
 
 .border {
@@ -124,7 +136,6 @@ nav {
   align-items: center;
   gap: .625rem;
   color: silver;
-  filter: brightness(0.6);
 }
 
 .contact {
