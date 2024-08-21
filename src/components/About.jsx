@@ -67,7 +67,6 @@ export const About = () => {
           <p>
             Outside of working on coding projects, you can find me cooking up some delicious meals for friends and family, cheering on the 49ers to their 6th Super Bowl, checking out a new movie, or brushing up on my billiards skills. 
           </p>
-          
         </div>
        <ProfilePic />
       </div>
