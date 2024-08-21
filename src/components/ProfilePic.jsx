@@ -1,7 +1,7 @@
 export const ProfilePic = () => {
   return (
-    <div className="pic">
-        <img className="profile_picture" src="./src/assets/profpic.jpg"/>
+    <div className="picture-container">
+        <img className="profile-picture" src="./src/assets/profpic.jpg"/>
     </div>
   )
 }

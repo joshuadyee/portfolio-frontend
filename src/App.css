@@ -4,7 +4,7 @@ header {
   padding: 0.25rem;
   justify-content: space-between;
   align-items: center;
-  height: 7.5vh;
+  height: 9vh;
   border-bottom: 1px solid white;
   position: fixed;
   z-index: 100;
@@ -167,7 +167,7 @@ li a {
 }
 
 li a:hover {
-  color: rgb(19, 162, 190);
+  color: rgb(0, 213, 255);
 }
 
 
@@ -325,57 +325,64 @@ li a:hover {
 
 .about {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   color: inherit;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 2em;
   margin: 0;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+  padding-top: calc(7.5vh + 1em)
 }
 
-.about_container {
+.about-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2em;
+  padding: 2rem;
 }
 
-.picture_container {
+.picture-container {
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
-.profile_picture {
+.profile-picture {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
   object-fit: cover;
   margin: auto;
-  filter: brightness(0.7);
+  filter: contrast(1.15);
   outline: 0.15rem solid white;
 }
 
 .about h1 {
   font-size: 2rem;
-  color: rgb(0, 200, 211);
+  color: rgb(0, 242, 255);
 }
 
-.about_text {
+.about p {
+  font-size: 1.15rem;
+  color: white;
+}
+
+.about-text {
   margin-bottom: 1rem;
 }
 
 .important_text {
-  font-weight: bold;
-  color: rgba(21, 175, 206, 1);
+  font-weight: 600;
+  color: rgb(0, 213, 255);
   margin: 0 0.25rem;
   transition: text-shadow 0.3s ease;
   display: inline-block;
-}
-
-.important_text:hover {
-  text-shadow: 0 0 0.5rem rgba(0, 213, 255, 0.902);
 }
 
 .no-space {
@@ -388,15 +395,49 @@ li a:hover {
   list-style-type: none;
   gap: .5rem;
   font-size: 2rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
+  color: silver;
 }
 
 .skills li:hover {
   color: white;
-  filter: contrast(1.5);
+  filter: brightness(1.5);
 }
 
-.projects_title {
+.experiences {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resume-link {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.resume-link a {
+  color: rgb(0, 242, 255);
+  transition: transform 0.3s ease;
+}
+
+.resume-link svg {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.resume-link a:hover {
+  transform: scale(1.25);
+  color: white;
+}
+
+.projects-link {
+  text-decoration: none;
+  color: rgb(0, 242, 255);
+}
+
+.projects-title {
   color: inherit;
   text-decoration: none;
 }
