@@ -11,7 +11,7 @@ export const Content = () => {
       <hr className="page_break"/>
       <Portfolio />
       <hr className="page_break"/>
-      {/* <Contact /> */}
+      {/* <Contact */}
     </main>
   )
 }

@@ -8,7 +8,7 @@ export const Header = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6
+      threshold: 0.4,
     }
 
     const observer = new IntersectionObserver(entries => {

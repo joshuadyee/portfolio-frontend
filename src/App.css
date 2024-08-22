@@ -321,23 +321,38 @@ li a:hover {
   color: rgba(9, 9, 121, 1);
 }
 
-/* About page */
+/* About Section */
 
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   color: inherit;
   height: 100vh;
-  min-height: 100vh;
   width: 100%;
   padding: 2em;
   margin: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   position: relative;
   padding-top: calc(7.5vh + 1em)
+}
+
+.about::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar in Chrome, Safari, and Opera */
+}
+
+.about {
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
+}
+
+.about {
+  -ms-overflow-style: none;
+  /* Hides scrollbar in IE and Edge */
 }
 
 .about-container {
@@ -346,6 +361,37 @@ li a:hover {
   align-items: center;
   gap: 2em;
   padding: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+
+  .about,
+  .portfolio {
+    padding: 1em;
+    /* Adjust padding for smaller screens */
+    height: auto;
+    /* Allow height to adjust based on content */
+    overflow-y: auto;
+    /* Enable vertical scrolling if needed */
+  }
+
+  .about-container,
+  .portfolio-container {
+    flex-direction: column;
+    /* Ensure items stack vertically */
+    align-items: center;
+    /* Center items horizontally */
+  }
+}
+
+@media (max-width: 728px) {
+
+  .about,
+  .portfolio {
+    justify-content: flex-start;
+    /* Align items to the start on smaller screens */
+  }
 }
 
 .picture-container {
@@ -465,7 +511,7 @@ li a:hover {
 .portfolio {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: white;
   align-items: center;
   color: inherit;
@@ -486,11 +532,100 @@ li a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-width: 30rem;
 }
 
-.card-container {
+.portfolio-container {
   display: flex;
+  height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.projects-title {
+  font-size: 2rem;
+  margin-top: 3rem;
+  font-variant: small-caps;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 30rem;
+}
+
+.carousel-cards {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+  width: 100%;
+  flex-shrink: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-card.active {
+  opacity: 1;
+  height: 100%;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: inherit;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.carousel-btn:hover {
+  color: #666;
+}
+
+.card {
+  background-color: rgba(9, 9, 121, 1);
+  padding: 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 25rem;
+  margin: auto;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: whitesmoke 0.25rem 0.25rem;
+  transition: transform 0.7s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 2.5rem;
+  color: inherit;
+}
+
+.card-description {
+  font-size: 1.25rem;
+  color: inherit;
+  filter: brightness(.8);
+  text-align: start;
+}
+
+.card-stack {
+  display: flex;
+  font-size: 1rem;
 }
 
 footer {

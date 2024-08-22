@@ -10,7 +10,7 @@ export const Carousel = ({ projects }) => {
   }
 
   const prevSlide = () => {
-    setCurrent((current) => current === 0 ? projects.length - 1 : current + 1)
+    setCurrent((current) => current === 0 ? projects.length - 1 : current - 1)
   }
   
   return (
@@ -18,13 +18,14 @@ export const Carousel = ({ projects }) => {
       <button onClick={prevSlide} className='carousel-btn'>
         <FaChevronCircleLeft />
       </button>
-      <div className='carousel-cards'>
-        {projects.map(project => (
+      <div className='carousel-cards' style={{ transform: `translateX(-${current * 100}%)` }}>
+        {projects.map((project, i) => (
           <div className={`carousel-card ${i === current ? "active" : ''}`} key={i}>
             <Card 
               title={project.title}
               description={project.description}
               image={project.image}
+              stack={project.stack}
             />
           </div>
         ))}
