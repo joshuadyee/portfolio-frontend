@@ -16,7 +16,7 @@ export const Links = () => {
           <a href="mailto: joshyee16@gmail.com" target="_blank"><MdOutlineMailOutline /></a>
         </li>
         <li>
-          <a href="">
+          <a href="https://github.com/joshuadyee/Resume/blob/f7cca193cb673b9de5827d20f3865a0c14f13c44/Joshua-Yee-SWD-Resume.pdf" target="_blank">
             <IoIosDocument />
           </a>
         </li>
