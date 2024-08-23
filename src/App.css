@@ -329,7 +329,6 @@ li a:hover {
   justify-content: center;
   align-items: center;
   color: inherit;
-  width: 100%;
   padding: 2rem;
   margin: 0;
   overflow-y: auto;
@@ -337,6 +336,30 @@ li a:hover {
   scroll-behavior: smooth;
   position: relative;
   padding-top: calc(7.5vh + 1em)
+}
+
+/* big screen */
+
+@media screen and (min-width: 1201px) {
+  .about {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+}
+
+/* small screen */
+
+@media screen and (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    min-width: 25rem;
+  }
 }
 
 .about::-webkit-scrollbar {
@@ -362,8 +385,6 @@ li a:hover {
   padding: 2rem;
 }
 
-
-
 .bio {
   flex: 0 0 60%;
 }
@@ -371,6 +392,7 @@ li a:hover {
 .picture-container {
   display: flex;
   flex: 0 0 40%;
+  justify-content: center;
 }
 
 .profile-picture {

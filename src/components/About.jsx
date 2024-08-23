@@ -19,7 +19,7 @@ export const About = () => {
             Full-Stack Web Developer 
           </span>
           passionate about transforming client concepts into intuitive and precisely crafted web applications. My experiences drive me to continually learn and adapt, enabling me to build
-          <span className="important_text no-space">
+          <span className="important_text">
             dynamic, responsive applications
           </span> 
           that are both visually appealing and user-friendly. I'm excited to grow as a developer and collaborate with others to create
@@ -103,10 +103,10 @@ export const About = () => {
             </li>
           </ul>
         </p>
-        <h1>Beyond the Code</h1>
+        {/* <h1>Beyond the Code</h1>
         <p>
           Outside of working on coding projects, you can find me cooking up delicious meals for friends and family, cheering on the 49ers to their sixth Super Bowl victory, checking out a new movie, or brushing up on my billiards skills. 
-        </p>
+        </p> */}
       </div>
       <ProfilePic />
     </div>
