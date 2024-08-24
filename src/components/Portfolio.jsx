@@ -6,7 +6,8 @@ const projects = [
     title: "Cinesthesia",
     description: "A social cataloging website where users can rate, review, and share their thoughts on their favorites films with likeminded members of the community.",
     image: "https://static1.squarespace.com/static/6058f3b0dbb27b03bbd36be9/6058f3f6dbb27b03bbd37503/6058f3f6dbb27b03bbd37530/1614892162972/interstellar.png?format=1500w",
-    stack: ["React", "Tailwind CSS", "Ruby on Rails", "PostgreSQL"]
+    stack: ["React", "Tailwind CSS", "Ruby on Rails", "PostgreSQL"],
+    link: "https://github.com/joshuadyee/cinesthesia-frontend"
   },
   {
     id: 2,

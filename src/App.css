@@ -519,26 +519,26 @@ li a:hover {
 
 .card-container {
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 .projects-title {
   font-size: 2rem;
-  /* margin-top: 3rem; */
   font-variant: small-caps;
+  margin-bottom: 1rem;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(0, 0, 157);
-  /* padding: 1rem; */
   border-radius: 0.625rem;
   border: rgb(0, 242, 255) 0.1rem solid;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-  text-align: center;
   width: 15rem;
-  margin: auto;
+  height: 100%;
   overflow: hidden;
   transition: transform 0.5s ease;
 }
@@ -549,19 +549,23 @@ li a:hover {
 
 .card-image {
   width: 100%;
-  height: 100%;
-  /* border-radius: 1rem; */
-  /* box-shadow: whitesmoke 0.25rem 0.25rem; */
-  /* transition: transform 0.7s ease; */
+  max-height: 60%;
+  height: auto;
+  object-fit: cover;
 }
 
-/* .card-image:hover {
-  transform: scale(1.1);
-} */
+.card-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0.5rem;
+}
 
 .card-title {
   font-size: 2.5rem;
   color: inherit;
+  text-align: center;
 }
 
 .card-description {
@@ -576,6 +580,9 @@ li a:hover {
   display: flex;
   font-size: 1rem;
   flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: auto;
+  border: 1px solid white;
 }
 
 
