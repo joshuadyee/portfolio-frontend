@@ -84,7 +84,6 @@ export const About = () => {
         </ul>
         <h1>My Experience 
           <span className="resume-link" title="resume">
-            
             <a href="https://github.com/joshuadyee/Resume/blob/f7cca193cb673b9de5827d20f3865a0c14f13c44/Joshua-Yee-SWD-Resume.pdf" target="_blank" >
               <IoIosDocument />
             </a>

@@ -380,6 +380,7 @@ li a:hover {
 }
 
 .about h1 {
+  font-variant: small-caps;
   font-size: 2rem;
   color: rgb(0, 242, 255);
 }
@@ -513,7 +514,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-width: 30rem;
+  min-width: 25rem;
   padding: 2rem;
 }
 
@@ -528,7 +529,10 @@ li a:hover {
   font-size: 2rem;
   font-variant: small-caps;
   margin-bottom: 1rem;
+  /* color: rgb(0, 242, 255); */
 }
+
+/* Initial Card display */
 
 .card {
   display: flex;
@@ -538,20 +542,28 @@ li a:hover {
   border: rgb(0, 242, 255) 0.1rem solid;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
   width: 15rem;
-  height: 100%;
+  height: 25rem;
   overflow: hidden;
   transition: transform 0.5s ease;
 }
 
-.card:hover {
-  transform: scale(1.1);
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 2.25rem;
+  color: inherit;
+  transition: bottom 1s ease;
 }
 
 .card-image {
   width: 100%;
-  max-height: 60%;
-  height: auto;
   object-fit: cover;
+  flex: 0 0 75%;
 }
 
 .card-content {
@@ -562,29 +574,42 @@ li a:hover {
   padding: 0.5rem;
 }
 
-.card-title {
-  font-size: 2.5rem;
-  color: inherit;
-  text-align: center;
+/* Initially hide the description and stack */
+
+.card-description,
+.card-stack {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.card-description {
-  font-size: 1.25rem;
-  color: inherit;
-  filter: brightness(.8);
+/* Show the description and stack on hover, change image and title sizes */
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card:hover .card-description {
+  font-size: 1.1rem;
+  filter: brightness(0.8);
   text-align: start;
   padding: 0.5rem;
+  opacity: 1;
+  visibility: visible;
 }
 
-.card-stack {
-  display: flex;
-  font-size: 1rem;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: auto;
-  border: 1px solid white;
+.card:hover .card-image {
+  flex: 0 0 33%;
 }
 
+.card:hover .card-stack {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;
+}
 
 /* Contact page */
 
