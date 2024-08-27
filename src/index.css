@@ -13,7 +13,7 @@
 body,
 html {
   font-family: "Zain", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 1rem;
   color: #e7edf0;
@@ -26,6 +26,14 @@ html {
   padding-top: 9dvh;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive container */
+
+@media (min-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -57,41 +65,3 @@ html {
     max-width: 1536px;
   }
 }
-
-/* Zain Classes */
-
-/* .zain-extralight {
-  font-family: "Zain", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.zain-light {
-  font-family: "Zain", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.zain-regular {
-  font-family: "Zain", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.zain-bold {
-  font-family: "Zain", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.zain-extrabold {
-  font-family: "Zain", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.zain-black {
-  font-family: "Zain", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-} */
