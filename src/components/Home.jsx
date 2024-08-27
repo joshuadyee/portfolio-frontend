@@ -20,9 +20,6 @@ export const Home = () => {
             <h3>•</h3>
             <h3>Ruby on Rails</h3>
           </div>
-          {/* <div className="subheading contact">
-            Los Angeles • (626) 808-2891
-          </div> */}
         </div>
         <Cube />
       </div>
