@@ -9,7 +9,6 @@ header {
   position: fixed;
   z-index: 100;
   background-color: rgba(2, 0, 173, 1);
-  filter: brightness(0.9);
 }
 
 /* Navbar Stylings */
@@ -87,7 +86,7 @@ nav li a.active {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 9vh;
+    top: 10vh;
     right: 0;
     width: 100%;
     background-color: rgba(2, 0, 173, 1);
@@ -124,8 +123,22 @@ nav li a.active {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: -4rem;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .landing_screen {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .landing_screen {
+    gap: 1rem;
+  }
+
 }
 
 .title_container {
@@ -149,7 +162,6 @@ nav li a.active {
 }
 
 .title_container h1 {
-  /* white-space: nowrap; */
   overflow: none;
 }
 
@@ -185,10 +197,6 @@ nav li a.active {
   color: silver;
 }
 
-.contact {
-  margin-top: -0.25rem;
-}
-
 .contact-button {
   padding: 0.5rem;
   margin: 0.5rem;
@@ -209,9 +217,12 @@ nav li a.active {
 
 /* Cube Container */
 /* https://dev.to/joeattardi/let-s-make-a-css-cube-1fed */
+
 .cube-container {
-  width: 25vmin;
-  height: 25vmin;
+  width: 20vw;
+  height: 20vw;
+  max-width: 330px;
+  max-height: 330px;
   perspective: 62.5rem;
   margin: 4em;
   display: flex;
@@ -237,7 +248,7 @@ nav li a.active {
   width: 100%;
   height: 100%;
   background: rgba(134, 130, 130, .2);
-  border: 2px solid black;
+  border: 0.125rem solid black;
   border-radius: 1rem;
   box-shadow: 0 0 .625rem rgb(0, 242, 255);
   color: white;
@@ -255,58 +266,87 @@ nav li a.active {
 }
 
 .front {
-  transform: translateZ(12.5dvh);
+  transform: translateZ(10vw);
 }
 
 .back {
-  transform: translateZ(-12.5dvh) rotateY(180deg);
+  transform: translateZ(-10vw) rotateY(180deg);
 }
 
 .left {
-  transform: translateX(-12.5dvh) rotateY(-90deg);
+  transform: translateX(-10vw) rotateY(-90deg);
 }
 
 .right {
-  transform: translateX(12.5dvh) rotateY(90deg);
+  transform: translateX(10vw) rotateY(90deg);
 }
 
 .top {
-  transform: translateY(-12.5dvh) rotateX(90deg);
+  transform: translateY(-10vw) rotateX(90deg);
 }
 
 .bottom {
-  transform: translateY(12.5dvh) rotateX(-90deg);
+  transform: translateY(10vw) rotateX(-90deg);
+}
+
+/* Cube faces on large screen */
+
+@media (min-width: 1320px) {
+  .front {
+    transform: translateZ(165px);
+    /* Half of the max width/height minus 2px for border */
+  }
+
+  .back {
+    transform: translateZ(-165px) rotateY(180deg);
+  }
+
+  .left {
+    transform: translateX(-165px) rotateY(-90deg);
+  }
+
+  .right {
+    transform: translateX(165px) rotateY(90deg);
+  }
+
+  .top {
+    transform: translateY(-165px) rotateX(90deg);
+  }
+
+  .bottom {
+    transform: translateY(165px) rotateX(-90deg);
+  }
 }
 
 /* Cube Faces on smaller screens */
 @media (max-width: 768px) {
   .cube-container {
-    width: 35vmin;
-    height: 35vmin;
+    width: 35vw;
+    height: 35vw;
   }
 
   .front {
-    transform: translateZ(17.5vmin);
+    transform: translateZ(17.5vw);
   }
 
   .back {
-    transform: translateZ(-17.5vmin) rotateY(180deg);
+    transform: translateZ(-17.5vw) rotateY(180deg);
   }
 
   .left {
-    transform: translateX(-17.5vmin) rotateY(-90deg);
+    transform: translateX(-17.5vw) rotateY(-90deg);
   }
 
   .right {
-    transform: translateX(17.5vmin) rotateY(90deg);
+    transform: translateX(17.5vw) rotateY(90deg);
   }
 
   .top {
-    transform: translateY(-17.5vmin) rotateX(90deg);
+    transform: translateY(-17.5vw) rotateX(90deg);
   }
 
   .bottom {
-    transform: translateY(17.5vmin) rotateX(-90deg);
+    transform: translateY(17.5vw) rotateX(-90deg);
   }
 }
 
@@ -343,10 +383,9 @@ nav li a.active {
   padding: 2rem;
   margin: 0;
   overflow-y: auto;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   position: relative;
-  padding-top: calc(7.5vh + 1em)
+  padding-top: 10vh;
 }
 
 /* big screen */
@@ -356,7 +395,6 @@ nav li a.active {
     height: 100vh;
     min-height: 100vh;
   }
-
 }
 
 /* small screen */
@@ -370,6 +408,12 @@ nav li a.active {
 @media screen and (max-width: 768px) {
   .about-container {
     min-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-container {
+    min-width: 20rem;
   }
 }
 
@@ -530,18 +574,16 @@ nav li a.active {
 .portfolio {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: white;
+  justify-content: flex-start;
   align-items: center;
   color: inherit;
-  height: 100vh;
-
+  min-height: 100vh;
   padding: 2em;
   margin: 0;
   overflow-y: auto;
   scroll-behavior: smooth;
   position: relative;
-  padding-top: calc(7.5vh + 1em)
+  padding-top: 10vh;
 }
 
 .portfolio-container {
@@ -549,22 +591,39 @@ nav li a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 25rem;
   padding: 2rem;
+  margin-top: 2rem;
 }
+
+/* Stack on small screens */
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .portfolio-container {
+    margin-top: 2rem;
+  }
+}
+
+
 
 .card-container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .projects-title {
   font-size: 2rem;
   font-variant: small-caps;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: rgb(0, 242, 255);
 }
 
