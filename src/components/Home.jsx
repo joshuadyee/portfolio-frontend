@@ -23,7 +23,11 @@ export const Home = () => {
         </div>
         <Cube />
       </div>
-      <Links />
+      <div className="button-container">
+        <a className="contact-button" href="#contact">
+          Contact Me
+        </a>
+      </div>
     </section>
   )
 }  

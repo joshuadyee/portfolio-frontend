@@ -4,7 +4,7 @@ header {
   padding: 0.25rem;
   justify-content: space-between;
   align-items: center;
-  height: 9vh;
+  height: 10vh;
   border-bottom: 1px solid white;
   position: fixed;
   z-index: 100;
@@ -55,6 +55,7 @@ nav li a {
   color: inherit;
   font-size: 1.5rem;
   transition: color 0.3s;
+  font-variant: small-caps;
 }
 
 nav li a.active {
@@ -69,7 +70,12 @@ nav li a.active {
   font-size: 2rem;
   color: inherit;
   margin-right: 2rem;
+  margin-top: 0.5rem;
   cursor: pointer;
+}
+
+.dropdown-menu:hover {
+  color: rgb(0, 213, 255);
 }
 
 @media screen and (max-width: 768px) {
@@ -183,34 +189,23 @@ nav li a.active {
   margin-top: -0.25rem;
 }
 
-.links_container {
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.25rem;
-  width: 50%;
+.contact-button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid rgb(0, 242, 255);
+  background-color: rgba(2, 0, 173, 1);
+  border-radius: 0.25rem;
+  color: rgb(0, 242, 255);
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  font-variant: small-caps;
 }
 
-.links {
-  display: flex;
-  gap: 1.25rem;
-  justify-content: center;
-  list-style-type: none;
+.contact-button:hover {
+  background-color: rgb(0, 242, 255);
+  color: rgba(2, 0, 173, 1);
 }
-
-li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  color: inherit;
-  font-size: 2.5rem;
-  filter: contrast(1.3);
-}
-
-li a:hover {
-  color: rgb(0, 213, 255);
-}
-
 
 /* Cube Container */
 /* https://dev.to/joeattardi/let-s-make-a-css-cube-1fed */
@@ -570,7 +565,7 @@ li a:hover {
   font-size: 2rem;
   font-variant: small-caps;
   margin-bottom: 1rem;
-  /* color: rgb(0, 242, 255); */
+  color: rgb(0, 242, 255);
 }
 
 /* Initial Card display */
@@ -688,6 +683,7 @@ li a:hover {
   font-size: 3rem;
   color: rgb(0, 242, 255);
   text-align: left;
+  font-variant: small-caps;
 }
 
 .contact p {
@@ -702,6 +698,36 @@ li a:hover {
 
 .contact p a:hover {
   text-decoration: underline;
+}
+
+/* Links styles */
+
+.links_container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  width: 50%;
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  list-style-type: none;
+}
+
+li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: inherit;
+  font-size: 2.5rem;
+  filter: contrast(1.3);
+}
+
+li a:hover {
+  color: rgb(0, 213, 255);
 }
 
 .contact-form {
