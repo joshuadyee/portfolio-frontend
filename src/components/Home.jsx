@@ -1,5 +1,4 @@
 import { Cube } from "./Cube"
-import { Links } from "./Links"
 
 export const Home = () => {
   return (
@@ -7,10 +6,34 @@ export const Home = () => {
       <div className="landing_screen">
         <div className="title_container">
           <h1 className="my_name">
-            Joshua Yee
+            <span>J</span>
+            <span>o</span>
+            <span>s</span>
+            <span>h</span>
+            <span>u</span>
+            <span className="last-letter">a</span>
+            <span>Y</span>
+            <span>e</span>
+            <span>e</span>
           </h1>
           <h1 className="job_title">
-            Software Developer
+            <span>S</span>
+            <span>o</span>
+            <span>f</span>
+            <span>t</span>
+            <span>w</span>
+            <span>a</span>
+            <span>r</span>
+            <span className="last-letter">e</span>
+            <span>D</span>
+            <span>e</span>
+            <span>v</span>
+            <span>e</span>
+            <span>l</span>
+            <span>o</span>
+            <span>p</span>
+            <span>e</span>
+            <span>r</span>
           </h1>
           <hr className="border"/>
           <div className="subheading">
