@@ -37,7 +37,7 @@ export const Header = () => {
   return (    
     <header>
       <div className="home-icon">
-        <a href="/">
+        <a href="#home">
           JY
         </a>
       </div>

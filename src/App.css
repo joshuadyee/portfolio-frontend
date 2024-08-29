@@ -146,20 +146,8 @@ nav li a.active {
   flex-direction: column;
   padding: 1em;
   justify-content: center;
-  animation: slideIn 2s ease-out forwards;
   white-space: nowrap;
 }
-
-/* @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%) scale(0.5);
-  }
-
-  100% {
-    opacity: 1;
-  }
-} */
 
 .title_container h1 {
   overflow: none;
@@ -723,12 +711,17 @@ span:nth-child(17) {
   flex-direction: column;
   background-color: rgb(0, 0, 157);
   border-radius: 0.625rem;
-  border: rgb(0, 242, 255) 0.1rem solid;
+  border: .125rem solid silver;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
   width: 15rem;
   height: 25rem;
   overflow: hidden;
   transition: transform 0.5s ease;
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .card-content {
@@ -739,9 +732,10 @@ span:nth-child(17) {
 }
 
 .card-title {
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: inherit;
   transition: bottom 1s ease;
+  font-variant: small-caps;
 }
 
 .card-image {
@@ -772,15 +766,17 @@ span:nth-child(17) {
 .card:hover {
   transform: scale(1.1);
   cursor: pointer;
+  border: rgb(0, 242, 255) .25rem solid;
 }
 
 .card:hover .card-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   filter: brightness(0.8);
   text-align: start;
   padding: 0.5rem;
   opacity: 1;
   visibility: visible;
+  margin-top: -0.5rem;
 }
 
 .card:hover .card-image {
@@ -793,7 +789,8 @@ span:nth-child(17) {
   position: absolute;
   bottom: 0;
   padding: 0.5rem;
-  color: rgb(0, 213, 255)
+  color: rgb(0, 213, 255);
+  word-wrap: none;
 }
 
 /* Contact page */
