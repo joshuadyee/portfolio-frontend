@@ -21,6 +21,8 @@ html {
   overflow-x: hidden;
 }
 
+/* Responsive container */
+
 .container {
   width: 100%;
   max-width: 100%;
@@ -31,14 +33,23 @@ html {
   align-items: center;
 }
 
-/* Responsive container */
-
-@media (min-width: 400px) {
+/* Responsive container for small screens */
+@media (max-width: 399px) {
   .container {
-    max-width: 400px;
+    padding-top: calc(10vh + 0.5rem);
+    /* Reduce padding for screens smaller than 400px */
   }
 }
 
+/* Adjustments for screens between 400px and 640px */
+@media (min-width: 400px) and (max-width: 639px) {
+  .container {
+    max-width: 400px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Adjustments for screens 640px and above */
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
