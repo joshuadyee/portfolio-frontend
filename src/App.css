@@ -11,24 +11,24 @@ header {
   background-color: rgba(2, 0, 173, 1);
 }
 
-/* Navbar Stylings */
+/* Icon Stylings */
 
 .home-icon {
   display: flex;
   flex: 0 0 25%;
   justify-content: center;
-  font-size: 2.5rem;
   color: inherit;
 }
 
-.home-icon a {
-  text-decoration: none;
-  color: inherit;
+.personal-logo {
+  height: 100%;
+  width: 7.5vh;
+  margin-left: 1rem;
+  fill: rgb(0, 242, 255);
+  object-fit: contain;
 }
 
-.home-icon a:hover {
-  color: rgba(21, 175, 206, 1);
-}
+/* Navbar Stylings */
 
 nav {
   display: flex;
