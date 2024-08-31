@@ -1,3 +1,4 @@
+import { Links } from "./Links"
 import { Cube } from "./Cube"
 
 export const Home = () => {
@@ -46,11 +47,7 @@ export const Home = () => {
         </div>
         <Cube />
       </div>
-      <div className="button-container">
-        <a className="contact-button" href="#contact">
-          Contact Me
-        </a>
-      </div>
+      <Links />
     </section>
   )
 }  
