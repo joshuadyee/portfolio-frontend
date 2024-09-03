@@ -38,7 +38,7 @@ export const Header = () => {
     <header>
       <div className="home-icon">
         <a href="#home">
-          <img src="src/assets/JY-Logo-reverse.svg" className="personal-logo" alt="logo" />
+          <img src="/assets/JY-Logo-reverse.svg" className="personal-logo" alt="logo" />
         </a>
       </div>
       <nav>
