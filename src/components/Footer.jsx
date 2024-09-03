@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer>
-      All Rights Reserved 2024
+      @2024 Joshua Yee. All Rights Reserved.
     </footer>
   )
 }

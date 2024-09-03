@@ -156,6 +156,7 @@ nav li a.active {
   padding: 1em;
   justify-content: center;
   white-space: nowrap;
+
 }
 
 .title_container h1 {
@@ -848,7 +849,7 @@ span:nth-child(17) {
 .links_container {
   justify-content: center;
   align-items: center;
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
   width: 50%;
 }
 
@@ -859,7 +860,7 @@ span:nth-child(17) {
   list-style-type: none;
 }
 
-li a {
+.links li a {
   display: flex;
   justify-content: center;
   align-items: center;
