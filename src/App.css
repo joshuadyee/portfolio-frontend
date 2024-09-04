@@ -289,6 +289,63 @@ span:nth-child(17) {
   color: silver;
 }
 
+/* Links Stylings */
+
+/* Links styles */
+
+.links_container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+  width: 50%;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: inherit;
+  font-size: 2.5rem;
+  filter: contrast(1.3);
+  position: relative;
+  /* Ensures hover text is positioned relative to the icon */
+}
+
+.hover-text {
+  position: absolute;
+  /* Position it on top of the icon */
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+  /* Adjust font size of the text */
+  transition: opacity 0.3s ease;
+  color: rgb(0, 242, 255)
+}
+
+li:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+li a:hover svg,
+/* For the icon visibility */
+li a:hover i {
+  /* In case you use font icons */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
 /* Cube Container */
 /* https://dev.to/joeattardi/let-s-make-a-css-cube-1fed */
 
@@ -591,13 +648,21 @@ span:nth-child(17) {
 }
 
 .resume-link {
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   display: inline-flex;
   vertical-align: middle;
 }
 
 .resume-link a {
   color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: inherit;
+  font-size: 2.5rem;
+  filter: contrast(1.3);
+  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -606,9 +671,18 @@ span:nth-child(17) {
   vertical-align: middle;
 }
 
-.resume-link a:hover {
-  transform: scale(1.25);
-  color: white;
+.resume-link:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.resume-link:hover svg,
+/* For the icon visibility */
+.resume-link:hover i {
+  /* In case you use font icons */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .projects-link {
@@ -844,60 +918,7 @@ span:nth-child(17) {
   text-decoration: underline;
 }
 
-/* Links styles */
-
-.links_container {
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.75rem;
-  width: 50%;
-}
-
-.links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.links li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  color: inherit;
-  font-size: 2.5rem;
-  filter: contrast(1.3);
-  position: relative;
-  /* Ensures hover text is positioned relative to the icon */
-}
-
-.hover-text {
-  position: absolute;
-  /* Position it on top of the icon */
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-  font-weight: 500;
-  font-size: 1.25rem;
-  /* Adjust font size of the text */
-  transition: opacity 0.3s ease;
-  color: rgb(0, 242, 255)
-}
-
-li:hover .hover-text {
-  opacity: 1;
-  visibility: visible;
-}
-
-li a:hover svg,
-/* For the icon visibility */
-li a:hover i {
-  /* In case you use font icons */
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
+/* Contact Form */
 
 .contact-form {
   display: flex;
