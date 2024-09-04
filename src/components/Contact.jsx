@@ -4,10 +4,10 @@ import { useState } from "react"
 export const Contact = () => {
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     subject: "",
-    message: "",
+    contact_number: "",
   })
 
   const handleChange = (e) => {
@@ -24,7 +24,7 @@ export const Contact = () => {
       .then((result) => {
         console.log("SUCCESS", result.text)
         alert("Message sent successfully!")
-        setFormData({ name: "", email: "", subject: "", message: "" }) // clear form
+        setFormData({ user_name: "", user_email: "", contact_number: "", message: "" }) // clear form
       })
       .catch((error) => {
         console.log("ERROR", error.text) 
@@ -46,11 +46,11 @@ export const Contact = () => {
           <form onSubmit={sendMessage}>
             <ul>
               <li className="form-row">
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required/>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required/>
+                <input type="text" id="user_name" name="user_name" value={formData.user_name} onChange={handleChange} placeholder="Name" required/>
+                <input type="email" id="user_email" name="user_email" value={formData.user_email} onChange={handleChange} placeholder="Email" required/>
               </li>
               <li>
-                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subject" required/>
+                <input type="text" id="contact_number" name="contact_number" value={formData.contact_number} onChange={handleChange} placeholder="Subject" required/>
               </li>
               <li>
                 <textarea name="message" id="message" value={formData.message} onChange={handleChange} placeholder="Message" required></textarea> 
