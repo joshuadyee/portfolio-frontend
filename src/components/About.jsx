@@ -103,6 +103,10 @@ export const About = () => {
             </li>
           </ul>
         </p>
+        {/* <h1>Beyond the Code</h1>
+        <p>
+          Outside of working on coding projects, you can find me cooking up delicious meals for friends and family, cheering on the 49ers to their sixth Super Bowl victory, checking out a new movie, or brushing up on my billiards skills. 
+        </p> */}
       </div>
       <ProfilePic />
     </div>
