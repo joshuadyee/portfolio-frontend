@@ -136,6 +136,8 @@ nav li a.active {
   margin-bottom: 3rem;
 }
 
+/* Stack on smaller screens */
+
 @media screen and (max-width: 768px) {
   .landing_screen {
     flex-direction: column;
@@ -521,16 +523,16 @@ li a:hover i {
 
 /* big screen */
 
-@media screen and (min-width: 1310px) {
+@media (min-width: 1801px) {
   .about {
     height: 100vh;
     min-height: 100vh;
   }
 }
 
-/* small screen */
+/* Stack on smaller screens */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .about-container {
     flex-direction: column;
   }
